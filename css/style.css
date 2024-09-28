@@ -170,6 +170,7 @@ footer {
   width: 100%;
   background-color: var(--bg_default);
   border-radius: 10px;
+  overflow: hidden;
 }
 .card img{
   width: 100%;
