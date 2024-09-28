@@ -1,0 +1,214 @@
+.nunito-sans-uniquifier {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+* {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--brand-primary);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-head {
+  padding: 24px 76px;
+}
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--bg_default);
+  font-weight: 600;
+}
+#two_trainglesone {
+  background-image: linear-gradient(
+    to right,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  clip-path: polygon(0 0, 90% 0, 0 100%, 0% 100%);
+  z-index: 1;
+}
+#two_trainglestwo {
+  background-color: var(--brand-secondary);
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 0%);
+}
+.custom-button:active {
+  background-color: var(--brand-secondary);
+  color: var(--bg_default);
+}
+.custom-button:hover {
+  background-color: #ccc;
+}
+#second-head {
+  height: 145px;
+}
+#welcome {
+  align-self: flex-end;
+  margin: 15px;
+}
+#welcome h1 {
+  color: var(--brand-secondary);
+  font-size: 1.5rem;
+}
+main {
+  background-color: var(--bg_body);
+  flex-grow: 1;
+}
+footer {
+  background-color: var(--bg_body);
+  padding: 10px;
+}
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  display: inline-flex;
+  align-items: center;
+}
+
+.heart-icon {
+  color: red;
+  font-size: 24px;
+  margin: 0 5px;
+}
+.filterbuttons {
+  flex-grow: 1;
+}
+.dropdownbuttons {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  border-left: 1px solid #ccc;
+}
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: var(--bg_default);
+}
+#searchbar {
+  width: 70%;
+}
+#searchbar ion-icon {
+  padding-left: 10px;
+}
+.dropdownbuttons span {
+  font-size: 12px;
+  padding-left: 4px;
+}
+.search-container input[type="text"] {
+  padding: 15px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.search-container select {
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .button-text {
+    display: none;
+  }
+  .main-head {
+    padding: 24px 16px;
+  }
+  #two_trainglesone,
+  #two_trainglestwo {
+    height: 50px;
+  }
+  .search-container input[type="text"] {
+    width: 100%;
+  }
+}
+@media(max-width:487px){
+  .dropdownbuttons{
+    border-top: 1px solid #ccc;
+  }
+}
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.card{
+  width: 100%;
+  background-color: var(--bg_default);
+  border-radius: 10px;
+}
+.card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+
+}
+.card ion-icon{
+  color: #E29A18;
+}
+.card-text{
+  padding: 16px;
+}
+#ratings{
+  margin-top: 20px;
+}
+.card-text p:nth-of-type(2){
+  font-weight: 200;
+  margin-top: 10px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-1 {
+  gap: 5px;
+}
+.gap-2 {
+  gap: 10px;
+}
