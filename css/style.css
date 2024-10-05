@@ -10,11 +10,10 @@
   margin: 0;
   padding: 0;
 }
-a {
-  text-decoration: none;
+#brand a {
   color: var(--brand-primary);
+  text-decoration: none;
 }
-
 .button-container {
   display: flex;
   gap: 10px;
@@ -30,16 +29,19 @@ body {
 }
 .main-head {
   padding: 24px 76px;
+  background-color: var(--bg_default);
 }
 .custom-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--lines-color);
   border-radius: 5px;
   background-color: var(--bg_default);
   font-weight: 600;
+  color: var(--body-text);
+  
 }
 #two_trainglesone {
   background-image: linear-gradient(
@@ -68,6 +70,8 @@ body {
   background-color: #ccc;
 }
 #second-head {
+  background-color: var(--bg_default);
+  color: var(--body-text);
   height: 145px;
 }
 #welcome {
@@ -93,6 +97,7 @@ footer {
 .footer p {
   display: inline-flex;
   align-items: center;
+  color: var(--body-text);
 }
 
 .heart-icon {
@@ -108,17 +113,22 @@ footer {
   flex-direction: column;
   flex-basis: 0;
   flex-grow: 1;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid var(--lines-color);
+  background-color: var(--bg_default);
+  color: var(--body-text);
 }
 .search-container {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--bg_body);
+  border-radius: 10px;
   margin: 10px 0;
   background-color: var(--bg_default);
+  overflow: hidden;
 }
 #searchbar {
+  background-color: var(--bg_default);
+  color: var(--body-text);
   width: 70%;
 }
 #searchbar ion-icon {
@@ -127,16 +137,23 @@ footer {
 .dropdownbuttons span {
   font-size: 12px;
   padding-left: 4px;
+  background-color: var(--bg_default);
 }
 .search-container input[type="text"] {
+  background-color: var(--bg_default);
   padding: 15px 10px;
   width: 100%;
   border: none;
   outline: none;
 }
+#h2-main{
+  color: var(--body-text);
+}
 
 .search-container select {
+  background-color: var(--bg_default);
   border: none;
+  color: var(--body-text);
 }
 
 @media (max-width: 768px) {
@@ -154,40 +171,40 @@ footer {
     width: 100%;
   }
 }
-@media(max-width:487px){
-  .dropdownbuttons{
+@media (max-width: 487px) {
+  .dropdownbuttons {
     border-top: 1px solid #ccc;
   }
 }
-.cards-container{
+.cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 10px;
   margin-top: 20px;
   padding: 10px;
 }
-.card{
+.card {
   width: 100%;
   background-color: var(--bg_default);
   border-radius: 10px;
   overflow: hidden;
 }
-.card img{
+.card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-
 }
-.card ion-icon{
-  color: #E29A18;
+.card ion-icon {
+  color: #e29a18;
 }
-.card-text{
+.card-text {
   padding: 16px;
+  color: var(--body-text);
 }
-#ratings{
+#ratings {
   margin-top: 20px;
 }
-.card-text p:nth-of-type(2){
+.card-text p:nth-of-type(2) {
   font-weight: 200;
   margin-top: 10px;
 }
