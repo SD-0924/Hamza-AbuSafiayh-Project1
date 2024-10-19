@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/details.css" />
-    <script src="javascript.js"></script>
+    <script src="details.js" defer></script>
+    <script src="favourites.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,18 +22,18 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <title>Document</title>
+    <title>Course Details</title>
   </head>
   <body>
     <header>
       <div class="flex justify-between align-center main-head">
-        <h1 id="brand"><a href="#">Web Topics</a></h1>
+        <h1 id="brand"><a href="index.html">Web Topics</a></h1>
         <div class="button-container">
-          <button class="custom-button gap-1">
+          <button class="custom-button gap-1" id="darkmodebutton">
             <ion-icon name="moon-outline"></ion-icon>
             <span class="button-text">Dark Mode</span>
           </button>
-          <button class="custom-button gap-1">
+          <button class="custom-button gap-1" id="favouritesbutton">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="button-text">Favourites</span>
           </button>
@@ -42,8 +43,8 @@
         <div id="two_trainglesone"></div>
         <div id="two_trainglestwo"></div>
         <div id="welcome">
-          <h1>Welcome to our website!</h1>
-          <p>We have a new design that's fresh, modern, and easy to use.</p>
+          <h1>Welcome to the course details page!</h1>
+          <p>Explore more about the course you're interested in.</p>
         </div>
       </div>
     </header>
@@ -51,76 +52,62 @@
       <div class="black-container justify-center">
         <div class="container40">
           <article>
-            <h3>Web Development Languages</h3>
-            <h1>HTML</h1>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star-outline"></ion-icon>
-            <p>
-              HTML (Hypertext Markup Language) is the standard markup language
-              for creating web pages and other information that can be displayed
-              in a web browser. It provides a structure for content and defines
-              how it should be displayed on a web page, including text, images,
-              and multimedia. HTML is essential for creating static web pages
-              and is a foundational technology for the World Wide Web.
-            </p>
+            <h3 id="course-category"></h3>
+            <h1 id="course-title"></h1>
+            <div id="ratings"></div>
+            <p id="course-description"></p>
           </article>
         </div>
-      
-          <div class="detailscard">
-            <img src="assets/images/javascript.jpg" alt="JavaScript" />
-            <div class="cardcontent">
-              <p><b>HTML </b>by <a href="#">Sarah Smith</a></p>
-              <div class="insidecardcontent">
-                <p>Interested about this topic?</p>
-                <button class="favbutton">
-                  <span>Add to Favourites </span>
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-                <p id="unlimitedcredits">Unlimited Credits</p>
-              </div>
+
+        <div class="detailscard">
+          <img id="course-image" alt="Course Image" />
+          <div class="cardcontent">
+            <p>
+              <b id="course-author"></b>by <a id="author-link" href="#"></a>
+            </p>
+            <div class="insidecardcontent">
+              <p>Interested in this topic?</p>
+              <button class="favbutton" id="addtofav">
+                <span>Add to Favourites </span>
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+              <p id="unlimitedcredits">Unlimited Credits</p>
             </div>
           </div>
-        
+        </div>
       </div>
+
       <div class="fathercontainer justify-center flex">
         <div class="container40">
           <div class="subtopics">
-            <h2>HTML Sub Topics</h2>
-            <ul>
-              <li>
-                <ion-icon name="checkmark-circle-outline"></ion-icon>HTML snytax
-                and structure
-              </li>
-              <li>
-                <ion-icon name="checkmark-circle-outline"></ion-icon>HTML
-                elements and attirubutes
-              </li>
-              <li>
-                <ion-icon name="checkmark-circle-outline"></ion-icon>HTML forms
-                and input elements
-              </li>
-              <li>
-                <ion-icon name="checkmark-circle-outline"></ion-icon>HTML tables
-                and lists
-              </li>
-              <li>
-                <ion-icon name="checkmark-circle-outline"></ion-icon>HTML
-                multimedia elemnts (audio, video, images)
-              </li>
-              <li>
-                <ion-icon name="checkmark-circle-outline"></ion-icon>HTML
-                accessibility and semantic markup
-              </li>
-            </ul>
+            <h2>Sub Topics</h2>
+            <ul id="subtopics-list"></ul>
           </div>
         </div>
         <div class="helper"></div>
       </div>
     </main>
-
+    <div class="favouritesbar">
+      <div class="container">
+        <div class="favbarcontent">
+          <h4>My Favourite Topics</h4>
+          <div class="favcardscontainer">
+            <!-- <div class="favcard">
+              <img src="assets/images/html.png" />
+              <div class="favcarddetails">
+                <h5>React</h5>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <p>
         Developed with

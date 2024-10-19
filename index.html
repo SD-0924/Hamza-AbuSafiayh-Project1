@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="javascript.js"></script>
+    <script src="index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,11 +28,11 @@
       <div class="flex justify-between align-center main-head">
         <h1 id="brand"><a href="#">Web Topics</a></h1>
         <div class="button-container">
-          <button class="custom-button gap-1">
+          <button class="custom-button gap-1" id="darkmodebutton">
             <ion-icon name="moon-outline"></ion-icon>
             <span class="button-text">Dark Mode</span>
           </button>
-          <button class="custom-button gap-1">
+          <button class="custom-button gap-1" id="favouritesbutton">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="button-text">Favourites</span>
           </button>
@@ -72,43 +72,30 @@
 
         <h2 id="h2-main">"24" Web Topics Found</h2>
 
-        <div class="cards-container gap-2">
-          <div class="card">
-            <img src="assets/images/html.png" alt="HTML image" />
-            <div class="card-text">
-              <p>Web Development Languages</p>
-              <h3>HTML</h3>
-              <div id="ratings">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-              <p>Author: Sarah Smith</p>
-            </div>
-          </div>
-          <div class="card">
-            <div>
-              <img src="assets/images/css.webp" alt="HTML image" />
-            </div>
-            <div class="card-text">
-              <p>Web Development Languages</p>
-              <h3>CSS</h3>
-              <div id="ratings">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-half"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-              <p>Author: David Lee</p>
-            </div>
-          </div>
-          
-        </div>
+        <div class="cards-container gap-2"></div>
       </div>
     </main>
+    <div class="favouritesbar">
+      <div class="container">
+        <div class="favbarcontent">
+          <h4>My Favourite Topics</h4>
+          <div class="favcardscontainer">
+            <!-- <div class="favcard">
+              <img src="assets/images/html.png" />
+              <div class="favcarddetails">
+                <h5>React</h5>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <p>
         Developed with
