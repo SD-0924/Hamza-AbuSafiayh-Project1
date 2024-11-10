@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <header>
       <div className="flex justify-between align-center main-head">
-        <h1 id="brand"><a href="index.html">Web Topics</a></h1>
+        <h1 id="brand"><a href="/">Web Topics</a></h1>
         <div className="button-container">
           <button className="custom-button gap-1" id="darkmodebutton">
             <ion-icon name="moon-outline"></ion-icon>

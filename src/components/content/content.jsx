@@ -1,11 +1,14 @@
 import React from "react";
-import {CourseGrid} from "../CourseGrid/courseGrid" 
+import { CourseGrid } from "../CourseGrid/courseGrid"
+import "./content.css"
+import "../../variables.css"
 
 
-export const Main = () => {
-    return(
-        <main>
-            <div className="container">
+export const Content = () => {
+  return (
+   
+    <div className="content">
+      <div className="container">
         <div className="search-container">
           <div id="searchbar" className="flex align-center">
             <ion-icon name="search"></ion-icon>
@@ -28,11 +31,11 @@ export const Main = () => {
         </div>
 
         <h2 id="h2-main">"24" Web Topics Found</h2>
-        <CourseGrid/>
+        <CourseGrid />
 
 
-        
+
       </div>
-        </main>
-    )
+    </div>
+  )
 }

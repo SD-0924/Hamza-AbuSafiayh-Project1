@@ -1,14 +1,13 @@
 import React from "react";
-import { Header } from "./components/header/header";
-import { Main } from "./components/main/main";
-import { Footer } from "./components/footer/footer";
+import { Layout } from "./layout";
 
-export const App = () => {
+
+export const App = (props) => {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Layout>
+        {props.children}
+      </Layout>
 
     </>
   )

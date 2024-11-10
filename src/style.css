@@ -81,10 +81,7 @@ body {
   color: var(--brand-secondary);
   font-size: 1.5rem;
 }
-main {
-  background-color: var(--bg_body);
-  flex-grow: 1;
-}
+
 footer {
   background-color: var(--bg_body);
   padding: 10px;
@@ -121,7 +118,7 @@ footer {
   flex-wrap: wrap;
   border: 1px solid var(--bg_body);
   border-radius: 10px;
-  margin: 10px 0;
+  margin-top: 20px;
   background-color: var(--bg_default);
   overflow: hidden;
 }

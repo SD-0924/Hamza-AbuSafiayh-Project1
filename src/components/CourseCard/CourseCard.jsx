@@ -9,11 +9,11 @@ function getStars(rating) {
 
   for (let i = 0; i < 5; i++) {
     if (rating >= i + 1) {
-      starElements.push(fullStar);
+      starElements.push(<ion-icon key={i} name="star"></ion-icon>);
     } else if (rating > i && rating < i + 1) {
-      starElements.push(halfStar);
+      starElements.push(<ion-icon key={i} name="star-half"></ion-icon>);
     } else {
-      starElements.push(emptyStar);
+      starElements.push(<ion-icon key={i} name="star-outline"></ion-icon>);
     }
   }
 
@@ -24,7 +24,7 @@ export const CourseCard = (props) => {
   return (
     <div
       className="card"
-      onClick={() => (window.location.href = `details.html?id=${props.id}`)}
+      onClick={() => (window.location.href = `details/${props.id}`)}
     >
       <div className="image-container">
         <img src={props.image} alt={'image'} />

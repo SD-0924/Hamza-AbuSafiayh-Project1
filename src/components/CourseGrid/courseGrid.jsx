@@ -27,6 +27,7 @@ useEffect(()=>{
                 
                     return (
                         <CourseCard
+                        key={course.id}
                         id={course.id}
                         topic={course.topic}
                         rating={course.rating}
