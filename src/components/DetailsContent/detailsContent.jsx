@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../details.css';
+import './detailsCotnent.css'
 export const DetailsContent = () => {
     const { id } = useParams();
     const [course, setCourse] = useState(null);
@@ -22,6 +23,7 @@ export const DetailsContent = () => {
     };
     return (
     <>
+    <div className='main'>
     <div class="black-container justify-center">
         <div class="container40">
           <article>
@@ -63,6 +65,8 @@ export const DetailsContent = () => {
           </div>
         </div>
         <div class="helper"></div>
-      </div></>
+      </div>
+      </div>
+      </>
     )
 }

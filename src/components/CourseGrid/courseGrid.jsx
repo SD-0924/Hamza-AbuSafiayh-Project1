@@ -1,45 +1,27 @@
-import React, { useEffect, useState } from "react";
-import { CourseCard } from "../coursecard/CourseCard";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import {CourseCard} from '../CourseCard/CourseCard';
 
+export const CourseGrid = ({ searchQuery }) => {
+  const [courses, setCourses] = useState([]);
 
-function fetchCourses(){
-    return(
-        fetch("https://tap-web-1.herokuapp.com/topics/list")
-  .then((result) => {
-    return result.json();
-  })
-  .catch((error) => {
-    console.error("Error Fetching content", error);
-  })
-    )
-}
-export const CourseGrid = () => {
-    const [courses,setCourses] = useState();
-useEffect(()=>{
-    fetchCourses().then(courses=> {
-        setCourses(courses)
-    })
-}, [])
-    return(
-        <div className="cards-container gap-2">
-        {
-          courses?.map(course => {
-                
-                    return (
-                        <CourseCard
-                        key={course.id}
-                        id={course.id}
-                        topic={course.topic}
-                        rating={course.rating}
-                        name= {course.name}
-                        image ={`/images/${course.image}`}
-                        />
-                
-               );
-            })
-            
-        }
-        </div>
+useEffect(() => {
+    fetch("https://tap-web-1.herokuapp.com/topics/list")
+      .then(response => response.json())
+      .then(data => setCourses(data))
+      .catch(error => console.error("Error fetching courses:", error));
+  }, []);
 
-    )
+  // Filter courses based on search query
+  const filteredCourses = courses.filter(course =>
+    course.topic.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  return (
+    <div className="cards-container gap-2">
+      {filteredCourses.map(course => (
+        <CourseCard key={course.id} course={course} />
+      ))}
+    </div>
+  );
 }

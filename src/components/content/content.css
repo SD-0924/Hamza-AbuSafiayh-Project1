@@ -2,3 +2,8 @@
     background-color: var(--bg_body);
     flex-grow: 1;
   }
+
+  .hero{
+    width: 100%;
+    background-color: var(--bg_body);
+  }

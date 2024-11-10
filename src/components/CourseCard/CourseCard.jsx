@@ -24,21 +24,17 @@ export const CourseCard = (props) => {
   return (
     <div
       className="card"
-      onClick={() => (window.location.href = `details/${props.id}`)}
+      onClick={() => (window.location.href = `details/${props.course.id}`)}
     >
       <div className="image-container">
-        <img src={props.image} alt={'image'} />
+        <img src={`/images/${props.course.image}`} alt={'image'} />
       </div>
       <div className="card-text">
-        <p>{props.category}</p>
-        <h3>{props.topic}</h3>
-        <div id="ratings">{getStars(props.rating)}</div>
-        <p>Author: {props.name}</p>
+        <p>{props.course.category}</p>
+        <h3>{props.course.topic}</h3>
+        <div id="ratings">{getStars(props.course.rating)}</div>
+        <p>Author: {props.course.name}</p>
       </div>
     </div>
   );
 }
-
-
-
-

@@ -1,12 +1,13 @@
 import React from "react";
 import { Layout } from "./layout";
+import { Outlet } from "react-router-dom";
 
 
-export const App = (props) => {
+export const App = () => {
   return (
     <>
       <Layout>
-        {props.children}
+        <Outlet/>
       </Layout>
 
     </>

@@ -2,6 +2,10 @@ import React from "react";
 
 
 export const Header = () => {
+  const darkmodeButton = () => {
+    const darkmode = document.querySelector("body");
+    darkmode.classList.toggle("dark-mode");
+  }
     return (
         <header>
       <div className="flex justify-between align-center main-head">
@@ -9,7 +13,7 @@ export const Header = () => {
         <div className="button-container">
           <button className="custom-button gap-1" id="darkmodebutton">
             <ion-icon name="moon-outline"></ion-icon>
-            <span className="button-text">Dark Mode</span>
+            <span className="button-text" onClick={darkmodeButton}>Dark Mode</span>
           </button>
           <button className="custom-button gap-1" id="favouritesbutton">
             <ion-icon name="heart-outline"></ion-icon>
